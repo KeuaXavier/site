@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Não clique no botão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function playAudio() {
+        let audio1 = document.getElementById("jhefferson")
+        audio1.play();
+        function playAudio2() {
+            let audio2 = document.getElementById("buzina")
+            audio2.play()
+        }
+        setTimeout(playAudio2, 900);
+    }
+</script>
+
+<body>
+    <audio id="jhefferson" controls>
+        <source src="second-audio.mp3" type="audio/mp3">
+    </audio>
+    <audio id="buzina" controls>
+        <source src="first-audio.mp3" type="audio/mp3">
+    </audio>
+    <div class="botao">
+        <button onclick="playAudio()">
+            <div class="texto">
+                Não Clique
+            </div>
+        </button>
+    </div>
+</body>
+
+</html>
